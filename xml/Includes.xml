@@ -2210,19 +2210,34 @@
 						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 					</control>
 					<control type="label">
+						<right>-70</right>
+						<top>0</top>
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
+						<align>center</align>
 						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
 					</control>
 					<control type="image">
-						<top>1</top>
+						<right>-50</right>
+						<top>0</top>
+						<width>50</width>
+						<height>50</height>
+						<aspectratio aligny="center" align="center">keep</aspectratio>
+						<texture>special://skin/extras/weather/alert-animated.apng</texture>
+						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
+						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
+						<animation effect="fade" end="0" time="0" condition="String.IsEmpty(Window(Weather).Property(Alerts)) | String.IsEmpty(Window(Weather).Property(Alerts.IsFetched))">Conditional</animation>
+					</control>
+					<control type="image">
+						<right>0</right>
+						<top>0</top>
 						<width>50</width>
 						<height>50</height>
 						<fadetime>300</fadetime>
-						<aspectratio aligny="center" align="left">keep</aspectratio>
+						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture>$INFO[Weather.FanartCode,special://skin/extras/weather/,.png]</texture>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 						<visible>![Window.IsVisible(MyVideoNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyMusicNav.xml) + !Container.Content(addons)] + ![Window.IsVisible(MyPics.xml) + !Container.Content(addons)] + ![Window.IsVisible(DialogButtonMenu.xml) + Skin.HasSetting(powermenu_list)]</visible>
@@ -2746,7 +2761,7 @@
 				<top>30</top>
 				<width>240</width>
 				<height>160</height>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture>$INFO[ListItem.ActualIcon]</texture>
 				<align>center</align>
 				<aspectratio>scale</aspectratio>
 			</control>
@@ -2798,7 +2813,7 @@
 					<top>30</top>
 					<width>240</width>
 					<height>160</height>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>$INFO[ListItem.ActualIcon]</texture>
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 				</control>
@@ -4149,4 +4164,69 @@
 			</control>
 		</control>
 	</include>
+    <include name="WeatherInfoOSD">
+        <!-- weather info displayed in video OSD and video info -->
+        <control type="group">
+             <right>10</right>
+		     <top>175</top>
+            <width>300</width>
+            <height>200</height>
+			<visible>Skin.HasSetting(WeatherInfoOSD) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + !Window.IsVisible(MusicVisualisation.xml)</visible>
+<!--			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>200</height>
+				<colordiffuse>cc0f0f0f</colordiffuse>
+			<texture>dialogs/back.png</texture>
+			</control>
+-->
+            <!--Current Weather-->
+            <control type="image">
+                <!--Current Weather Icon-->
+                <texture>$INFO[Weather.FanartCode,special://skin/extras/weather/,.png]</texture>
+				<posx>-25</posx>
+                <width>200</width>
+                <height>200</height>
+                <aspectratio align="left" aligny="center">keep</aspectratio>
+            </control>
+			<!-- active weather alert icon overlay -->
+            <control type="image">
+                <texture>special://skin/extras/weather/alert.png</texture>
+				<posx>-50</posx>
+				<posy>-40</posy>
+				<width>200</width>
+                <height>200</height>
+                <aspectratio align="left" aligny="center">keep</aspectratio>
+				<visible>!String.IsEmpty(Window(Weather).Property(Alerts)) + !String.IsEmpty(Window(Weather).Property(Alerts.IsFetched))</visible>
+            </control>
+            <control type="label">
+                <!--Current Temp-->
+                <width>200</width>
+                <height>200</height>
+                <posx>110</posx>
+                <posy>50</posy>
+                <font>font60</font>
+                 <!-- colors should be hardcoded because display on video -->
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <align>center</align>
+                <label>$INFO[Window(Weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
+            </control>
+			<!--Current Conditions-->
+			<control type="label">
+                <width>200</width>
+                <height>200</height>
+                <posx>25</posx>
+                <posy>155</posy>
+                <font>font13</font>
+                <!-- colors should be hardcoded because display on video -->
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <align>center</align>
+                <label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+                <visible>Weather.IsFetched</visible>
+            </control>
+        </control>
+    </include>
 </includes>

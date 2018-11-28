@@ -5,12 +5,44 @@
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
+            <!--Settings (BG Fanart)-->
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1920</width>
+                <height>1280</height>
+                <texture background="true">$INFO[ListItem.Icon]</texture>
+                <aspectratio>keep</aspectratio>
+				<animation effect="fade" end="25" time="0" condition="true">Conditional</animation>
+            </control>
+<!-- 		<control type="image">
+			<left>-1920</left>
+			<top>-1080</top>
+			<width>2090</width>
+			<height>3240</height>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<texture colordiffuse="A0FFFFFF">colors/black.png</texture>
+		</control> -->
+		<control type="label">
+			<right>100%</right>
+			<top>100%</top>
+			<height>0</height>
+			<width>auto</width>
+			<label>$INFO[ListItem.Label]</label>
+<!-- 			<align>center</align>
+			<aligny>center</aligny> -->
+			<textcolor>33ffffff</textcolor>
+			<angle>90</angle>
+			<font>font_musicvis_bigger</font>
+		</control>
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<width>1600</width>
 			<top>0</top>
 			<bottom>0</bottom>
 			<include>OpenClose_Right</include>
+			
 			<control type="grouplist">
 				<orientation>vertical</orientation>
 				<height>100%</height>
@@ -26,26 +58,31 @@
 					<top>120</top>
 					<height>270</height>
 					<include>SettingsPanel</include>
+					<preloaditems>3</preloaditems>
 					<content>
 						<item>
 							<label>$LOCALIZE[20094]</label>
 							<onclick>ActivateWindow(1120)</onclick>
 							<icon>icons/settings/sources.png</icon>
+	                        <thumb>special://skin/extras/backgrounds/settings/media_sources.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[10003]</label>
 							<onclick>ActivateWindow(filemanager)</onclick>
 							<icon>icons/settings/filemanager.png</icon>
+	                        <thumb>special://skin/extras/backgrounds/settings/file_manager.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[24001]</label>
 							<onclick>ActivateWindow(addonbrowser)</onclick>
 							<icon>icons/settings/addons.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/addons.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[138]</label>
 							<onclick>ActivateWindow(systeminfo)</onclick>
 							<icon>icons/settings/sysinfo.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/system_info.jpg</thumb>
 						</item>
 					</content>
 				</control>
@@ -63,65 +100,77 @@
 					<right>0</right>
 					<height>900</height>
 					<include>SettingsPanel</include>
+					<preloaditems>3</preloaditems>
 					<onfocus>ClearProperty(settingsposition,home)</onfocus>
 					<content>
 						<item>
 							<label>$LOCALIZE[166]</label>
 							<onclick>ActivateWindow(SkinSettings)</onclick>
 							<icon>icons/settings/skin.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/skin.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[14206]</label>
 							<onclick>ActivateWindow(InterfaceSettings)</onclick>
 							<icon>icons/settings/interface.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/interface.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[14211]</label>
 							<onclick>ActivateWindow(MediaSettings)</onclick>
 							<icon>icons/settings/media.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/media.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[14200]</label>
 							<onclick>ActivateWindow(PlayerSettings)</onclick>
 							<icon>icons/settings/player.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/player.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[14204]</label>
 							<onclick>ActivateWindow(PVRSettings)</onclick>
 							<icon>icons/settings/livetv.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/pvr_livetv.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[14036]</label>
 							<onclick>ActivateWindow(ServiceSettings)</onclick>
 							<icon>icons/settings/network.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/services.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[15016]</label>
-							<visible>System.GetBool(gamesgeneral.enable)</visible>
+							<!-- <visible>System.GetBool(gamesgeneral.enable)</visible> -->
 							<onclick>ActivateWindow(GameSettings)</onclick>
 							<icon>icons/settings/games.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/games.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[13200]</label>
 							<onclick>ActivateWindow(Profiles)</onclick>
 							<icon>icons/settings/profiles.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/profiles.jpg</thumb>
 						</item>
 						<item>
 							<label>$LOCALIZE[13000]</label>
 							<onclick>ActivateWindow(SystemSettings)</onclick>
 							<icon>icons/settings/system.png</icon>
+							<thumb>special://skin/extras/backgrounds/settings/system.jpg</thumb>
 						</item>
 						<item>
 							<label>LibreELEC</label>
 							<onclick>RunAddon(service.libreelec.settings)</onclick>
 							<icon>icons/settings/libreelec.png</icon>
 							<visible>System.HasAddon(service.libreelec.settings)</visible>
+							<thumb>special://skin/extras/backgrounds/settings/libreelec.jpg</thumb>
 						</item>
 						<item>
 							<label>CoreELEC</label>
 							<onclick>RunAddon(service.coreelec.settings)</onclick>
 							<icon>icons/settings/coreelec.png</icon>
 							<visible>System.HasAddon(service.coreelec.settings)</visible>
+							<thumb>special://skin/extras/backgrounds/settings/coreelec.jpg</thumb>
 						</item>
 					</content>
 				</control>

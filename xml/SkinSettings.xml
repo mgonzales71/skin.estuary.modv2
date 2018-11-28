@@ -94,6 +94,24 @@
 					<selected>Skin.HasSetting(SmallOSDVideo)</selected>
                     <onclick>Skin.ToggleSetting(SmallOSDVideo)</onclick>
 				</control>
+				<control type="radiobutton" id="156">
+					<label>$LOCALIZE[40585]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(WeatherInfoOSD)</selected>
+                    <onclick>Skin.ToggleSetting(WeatherInfoOSD)</onclick>
+				</control>
+				<control type="radiobutton" id="199">
+					<label>$LOCALIZE[40591]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(SkinHelper.EnableExtendedArt)</selected>
+                    <onclick>Skin.ToggleSetting(SkinHelper.EnableExtendedArt)</onclick>
+				</control>
+				<control type="radiobutton" id="198">
+					<label>$LOCALIZE[40586]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(OSDLargeSeekingLabel)</selected>
+                    <onclick>Skin.ToggleSetting(OSDLargeSeekingLabel)</onclick>
+				</control>
 				<control type="radiobutton" id="114">
 					<label>$LOCALIZE[40159]</label>
 					<include>DefaultSettingButton</include>

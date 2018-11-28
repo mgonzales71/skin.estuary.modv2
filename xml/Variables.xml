@@ -3375,7 +3375,7 @@
 	<variable name="DialogInfoVideoArtVar">
 		<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
         <value condition="[Container.Content(movies) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Art(album.discart))">$INFO[ListItem.Art(album.discart)]</value>
-        <value condition="[Container.Content(movies) | Container.Content(SkinHelper.ListItem.Art.Discart))] + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Discart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Discart)]</value>
+        <value condition="[Container.Content(movies) | Container.Content(SkinHelper.ListItem.Art.Discart)] + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Discart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Discart)]</value>
         <value condition="!Container.Content(movies) + !Container.Content(musicvideos) + !String.IsEmpty(ListItem.Art(characterart))">$INFO[ListItem.Art(characterart)]</value>
 		<value condition="!Container.Content(movies) + !Container.Content(musicvideos) + !String.IsEmpty(ListItem.Art(tvshow.characterart))">$INFO[ListItem.Art(tvshow.characterart)]</value>
 		<value condition="!Container.Content(movies) + !Container.Content(musicvideos) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Characterart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Characterart)]</value>
@@ -3741,6 +3741,12 @@
 		<value condition="!Player.HasAudio">icons/now-playing/play.png</value>
 	</variable>
 	<variable name="NowPlayingPosterVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.poster))">$INFO[Window(Home).Property(SkinHelper.Player.Art.poster)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.tvshow.poster))">$INFO[Window(Home).Property(SkinHelper.Player.Art.tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.poster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.poster)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.poster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.season.poster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.season.poster)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Container.Art.season.poster))">$INFO[Window(Home).Property(SkinHelper.Container.Art.season.poster)]</value>
 		<value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(PVR.EpgEventIcon) + VideoPlayer.Content(livetv)">$INFO[PVR.EpgEventIcon]</value>
@@ -4063,12 +4069,17 @@
 	<variable name="PosterVar">
 		<value condition="ListItem.IsParentFolder + ![Control.IsVisible(55) + Container.Content(files)]">DefaultFolderBackPoster.png</value>
 		<value condition="Container.Content(actors) | Container.Content(directors)">$INFO[Container.ListItem.Art(thumb)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>	
-		<value condition="!String.IsEmpty(Listitem.Art(poster)) + Container.Content(seasons)">$INFO[Listitem.Art(poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + !String.IsEqual(listitem.dbtype,season)">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
+		<value condition="!String.IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
+		<value condition="!String.IsEmpty(Container.Art(tvshow.poster)) + Container.Content(episodes)">$INFO[Container.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(Container.Art(tvshow.poster)) + Container.Content(seasons) + Window.IsVisible(movieinformation)">$INFO[Container.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(Container.Art(poster)) + Container.Content(episodes)">$INFO[Container.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container.Art(tvshow.poster)) + Container.Content(episodes)">$INFO[Container.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(poster)) + Container.Content(seasons)">$INFO[Listitem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(tvshow.poster)) + Container.Content(seasons)">$INFO[Listitem.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(Container.Art(tvshow.poster)) + Container.Content(seasons) + Window.IsActive(movieinformation)">$INFO[Container.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + !String.IsEqual(listitem.dbtype,season)">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(Skin_EnableAnimatedPosters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="InfoDialogPosterVar">
@@ -4520,4 +4531,32 @@
     	<value condition="!String.IsEmpty(MusicPlayer.Property(Album_Description))">$INFO[MusicPlayer.Property(Album_Description)]</value>
     	<value condition="!String.IsEmpty(MusicPlayer.Property(Artist_Description))">$INFO[MusicPlayer.Property(Artist_Description)]</value>
     </variable>
+	<variable name="Weather_Menu_Item">
+		<value condition="!String.IsEmpty(Window(Weather).Property(Alerts)) + !String.IsEmpty(Window(Weather).Property(Alerts.IsFetched))">[COLOR RED]$LOCALIZE[12600][/COLOR]</value>
+		<value>$LOCALIZE[12600]</value>
+	</variable>
+	 <variable name="PlayerActionLabelLarge">
+		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">[B]$LOCALIZE[15107]:[/B] $INFO[Player.CacheLevel]%</value>
+		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding] + Player.seeking">[B]$LOCALIZE[40590][/B] $INFO[Player.SeekStepSize]</value>
+		<value condition="Player.DisplayAfterSeek  + ![player.forwarding | player.rewinding] + !String.IsEmpty(Player.SeekOffset)">[B]$LOCALIZE[40590][/B] $INFO[Player.SeekOffset]</value>
+		<value condition="Player.seeking">[B]$LOCALIZE[40590][/B] $INFO[Player.SeekTime] - $INFO[Player.Duration]</value>
+		<value condition="player.forwarding2x">[B]$LOCALIZE[40588][/B] x2</value>
+		<value condition="player.forwarding4x">[B]$LOCALIZE[40588][/B] x4</value>
+		<value condition="player.forwarding8x">[B]$LOCALIZE[40588][/B] x8</value>
+		<value condition="player.forwarding16x">[B]$LOCALIZE[40588][/B] x16</value>
+		<value condition="player.forwarding32x">[B]$LOCALIZE[40588][/B] x32</value>
+		<value condition="player.rewinding2x">[B]$LOCALIZE[40589][/B] x2</value>
+		<value condition="player.rewinding4x">[B]$LOCALIZE[40589][/B] x4</value>
+		<value condition="player.rewinding8x">[B]$LOCALIZE[40589][/B] x8</value>
+		<value condition="player.rewinding16x">[B]$LOCALIZE[40589][/B] x16</value>
+		<value condition="player.rewinding32x">[B]$LOCALIZE[40589][/B] x32</value>
+		<value condition="player.paused">[B]$LOCALIZE[40587][/B]</value>
+	 </variable>
+     <include name="HideOsdConditions">
+        <visible>
+            !Window.IsActive(PVROSDGuide) + !Window.IsActive(PVROSDTeletext) + !Window.IsActive(PVROSDChannels) + !Window.IsActive(videobookmarks) + 
+            !Window.IsActive(sliderdialog) + !Window.IsActive(subtitlesearch) + !Window.IsActive(osdaudiodspsettings) + 
+            !Window.IsActive(selectdialog) + !Window.IsActive(musicplaylist)
+        </visible>
+     </include>
 </includes>

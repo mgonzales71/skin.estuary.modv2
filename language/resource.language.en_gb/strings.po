@@ -2292,3 +2292,39 @@ msgstr ""
 msgctxt "#40314"
 msgid "Crew member in TV show"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#40585"
+msgid "Show current weather condition on video info"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#40586"
+msgid "Enable large onscreen playback and seek indicators"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40587"
+msgid "PAUSED"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40588"
+msgid "FAST FORWARD"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40589"
+msgid "REWIND"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40590"
+msgid "SEEKING"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40591"
+msgid "Enable Extended Artwork Lookup"
+msgstr ""
+

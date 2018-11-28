@@ -232,7 +232,7 @@
 				<top>0</top>
 				<width>316</width>
 				<height>316</height>
-				<texture fallback="DefaultDirector.png" background="true">http://localhost:52307/getthumb&title=$ESCINFO[ListItem.Label,, imdb]</texture>
+				<texture fallback="DefaultDirector.png" background="true">http://localhost:52307/getthumb&amp;title=$ESCINFO[ListItem.Label,, imdb]</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
 				<visible>Window.IsVisible(script-globalsearch.xml) + Container.Content(directors)</visible>

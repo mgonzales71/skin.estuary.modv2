@@ -8,6 +8,21 @@
 	<zorder>0</zorder>
 	<controls>
 		<include>PVRChannelNumberInput</include>
+        <include>WeatherInfoOSD</include>
+		<!-- large forward and rewind labels -->
+        <control type="label">
+            <visible>Skin.HasSetting(OSDLargeSeekingLabel) + !Window.IsActive(notification) + !Window.IsActive(DialogPlayerProcessInfo.xml)</visible>
+			<posx>0</posx>
+			<top>-10%</top>
+			<height>100%</height>
+			<width>100%</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font_musicvis_bigger</font>
+			<textcolor>88ffffff</textcolor>
+			<label>$VAR[PlayerActionLabelLarge]</label>
+            <include>HideOsdConditions</include>
+        </control>
 		<control type="group">
 			<animation effect="slide" end="0,-140" time="0" condition="Window.IsVisible(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40276])">Conditional</animation>
 			<animation effect="slide" end="0,-135" time="0" condition="Window.IsVisible(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[40279])">Conditional</animation>
