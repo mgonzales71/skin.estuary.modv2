@@ -80,7 +80,7 @@
 			<right>0</right>
 			<height>235</height>
 			<width>320</width>
-			<texture>themes/christmas/corner.png</texture>
+			<texture>special://skin/extras/themes/christmas/corner.apng</texture>
 			<include>OpenClose_Right</include>
 			<visible>$EXP[ChristmasTheme] + !$EXP[infodialog_active]</visible>
 		</control>

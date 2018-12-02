@@ -3741,15 +3741,15 @@
 		<value condition="!Player.HasAudio">icons/now-playing/play.png</value>
 	</variable>
 	<variable name="NowPlayingPosterVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.poster))">$INFO[Window(Home).Property(SkinHelper.Player.Art.poster)]</value>
+		<value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
+		<value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(PVR.EpgEventIcon) + VideoPlayer.Content(livetv)">$INFO[PVR.EpgEventIcon]</value>
+<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.poster))">$INFO[Window(Home).Property(SkinHelper.Player.Art.poster)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.tvshow.poster))">$INFO[Window(Home).Property(SkinHelper.Player.Art.tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.poster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.poster)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.poster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.season.poster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.season.poster)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Container.Art.season.poster))">$INFO[Window(Home).Property(SkinHelper.Container.Art.season.poster)]</value>
-		<value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
-		<value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
-		<value condition="!String.IsEmpty(PVR.EpgEventIcon) + VideoPlayer.Content(livetv)">$INFO[PVR.EpgEventIcon]</value>
 		<value condition="String.IsEmpty(Player.Art(thumb)) + VideoPlayer.Content(livetv)">DefaultTVSquare.png</value>
 		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 		<value>$INFO[Player.Icon]</value>
