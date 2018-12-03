@@ -19,7 +19,8 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font_musicvis_bigger</font>
-			<textcolor>88ffffff</textcolor>
+			<textcolor>$VAR[SkinColorVar]</textcolor>
+			<shadowcolor>black</shadowcolor>
 			<label>$VAR[PlayerActionLabelLarge]</label>
             <include>HideOsdConditions</include>
         </control>

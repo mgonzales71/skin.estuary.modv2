@@ -32,7 +32,8 @@
 			<label>$INFO[ListItem.Label]</label>
 <!-- 			<align>center</align>
 			<aligny>center</aligny> -->
-			<textcolor>33ffffff</textcolor>
+			<textcolor>$VAR[SkinColorVar]</textcolor>
+			<shadowcolor>black</shadowcolor>
 			<angle>90</angle>
 			<font>font_musicvis_bigger</font>
 		</control>

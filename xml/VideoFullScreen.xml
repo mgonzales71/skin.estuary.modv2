@@ -20,6 +20,7 @@
 				<height>100</height>
 				<label/>
 				<font>font12</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<visible>!Skin.HasSetting(OSDLargeSeekingLabel)</visible>
 			</control>
@@ -30,6 +31,7 @@
 				<height>100</height>
 				<label/>
 				<font>font12</font>
+				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label" id="12">
@@ -39,6 +41,7 @@
 				<height>100</height>
 				<label/>
 				<font>font12</font>
+				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="group" id="0">
@@ -50,8 +53,8 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font_musicvis_bigger</font>
-					<textcolor>88ffffff</textcolor>
-					<shadowcolor>aa000000</shadowcolor>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<aligny>center</aligny>
 					<align>center</align>
 					<label>-</label>
@@ -91,6 +94,8 @@
  				<aligny>center</aligny>
  				<align>right</align>
  				<font>font10</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<shadowcolor>black</shadowcolor>
  			</control>        
  			<control type="label" id="2">
  				<label>$LOCALIZE[15107]</label>
@@ -101,6 +106,8 @@
   				<aligny>center</aligny>
   				<align>left</align>
   				<font>font10</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<shadowcolor>black</shadowcolor>
   			</control>
 		</control>
 	<!-- Jump to Time Code Overlay -->
@@ -119,8 +126,8 @@
 				<aligny>center</aligny>
 				<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
 				<font>font_musicvis_bigger</font>
-                <textcolor>88ffffff</textcolor>
-				<shadowcolor>aa000000</shadowcolor>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<shadowcolor>black</shadowcolor>
 				<aligny>center</aligny>
 				<align>center</align>
 			</control>
