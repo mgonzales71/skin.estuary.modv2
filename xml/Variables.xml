@@ -3604,7 +3604,7 @@
 		<value>ffffffff</value>
 	</variable>
 	<variable name="SkinColorVar">
-		<value condition="System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes)">ffe30022</value>
+		<value condition="System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes)">ffe60014</value>
 		<value condition="System.Date(10-30,11-01) + !Skin.HasSetting(DisableThemes)">fff38844</value>
 		<value condition="System.Date(03-31,04-02) + !Skin.HasSetting(DisableThemes)">ffe9d66b</value>
 		<value condition="System.Date(02-13,02-15) + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
@@ -3612,7 +3612,7 @@
 		<value>button_focus</value>
 	</variable>
 	<variable name="GradientColorVar">
-		<value condition="System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes)">ffAF0024</value>
+		<value condition="System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes)">ffFF1932</value>
 		<value condition="System.Date(10-30,11-01) + !Skin.HasSetting(DisableThemes)">fff38844</value>
 		<value condition="System.Date(03-31,04-02) + !Skin.HasSetting(DisableThemes)">ffe9d66b</value>
 		<value condition="System.Date(02-13,02-15) + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
