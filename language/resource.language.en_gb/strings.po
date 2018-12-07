@@ -2328,3 +2328,14 @@ msgctxt "#40591"
 msgid "Enable Extended Artwork Lookup"
 msgstr ""
 
+#: /xml/SkinSettings.xml
+msgctxt "#40592"
+msgid "Enable Custom Busy Spinner"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#40593"
+msgid "Custom Busy Spinner"
+msgstr ""
+
+

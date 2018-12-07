@@ -672,6 +672,21 @@
 					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick condition="System.HasAddon(script.module.metadatautils)">Addon.OpenSettings(script.module.metadatautils)</onclick>
 				</control>
+				<control type="radiobutton" id="598">
+					<label>$LOCALIZE[40592]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(EnableCustomBusySpinner)</onclick>
+					<onclick condition="!Skin.String(SkinHelper.SpinnerTexture.Path)">Skin.SetString(SkinHelper.SpinnerTexture.Path, special://skin/extras/busy_spinner/)</onclick>
+					<onclick condition="!Skin.String(SkinHelper.SpinnerTexture.label)">Skin.SetString(SkinHelper.SpinnerTexture.Label,Default Custom)</onclick>
+					<selected>Skin.HasSetting(EnableCustomBusySpinner)</selected>
+				</control>
+				<control type="button" id="599">
+					<label>  ∟$LOCALIZE[40593]</label>
+					<label2>$INFO[Skin.String(SkinHelper.SpinnerTexture.label)]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=BUSYTEXTURE)</onclick>
+					<visible>Skin.HasSetting(EnableCustomBusySpinner)</visible>
+				</control>
 				<control type="radiobutton" id="505">
 					<label>$LOCALIZE[40032]</label>
 					<include>DefaultSettingButton</include>
@@ -682,7 +697,7 @@
 				<control type="button" id="507">
 					<label>$LOCALIZE[10041]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(enable_updateartworks)|Skin.Reset(powermenu_iconlist)|Skin.Reset(powermenu_list)|Skin.Reset(SplashScreen)|Skin.Reset(DisableThemes)|Skin.Reset(touchmode)|Skin.Reset(KioskMode)|Skin.Reset(Skin.ToggleDebug))</onclick>
+					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(enable_updateartworks)|Skin.Reset(powermenu_iconlist)|Skin.Reset(powermenu_list)|Skin.Reset(SplashScreen)|Skin.Reset(DisableThemes)|Skin.Reset(touchmode)|Skin.Reset(KioskMode)|Skin.Reset(Skin.ToggleDebug)|Skin.Reset(EnableCustomBusySpinner)|Skin.Reset(Skin.SetString(SkinHelper.SpinnerTexture.Path)|Skin.Reset(Skin.SetString(SkinHelper.SpinnerTexture.Label))</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="800">

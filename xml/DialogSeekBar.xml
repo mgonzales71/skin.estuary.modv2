@@ -22,6 +22,7 @@
 			<textcolor>$VAR[SkinColorVar]</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>$VAR[PlayerActionLabelLarge]</label>
+			<include>Fade70</include>
             <include>HideOsdConditions</include>
         </control>
 		<control type="group">

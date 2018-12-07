@@ -506,14 +506,14 @@
 				<width>100</width>
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
+				<texture colordiffuse="black">$VAR[ExtendedProgressLoadingBack]</texture>
 			</control>
 			<control type="image">
 				<top>160</top>
 				<width>100</width>
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture>dialogs/extendedprogress/loading.png</texture>
+				<texture>$VAR[ExtendedProgressLoading]</texture>
 				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
 			</control>
 		</control>
@@ -675,14 +675,14 @@
 				<width>100</width>
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
+				<texture colordiffuse="black">$VAR[ExtendedProgressLoadingBack]</texture>
 			</control>
 			<control type="image">
 				<top>160</top>
 				<width>100</width>
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture>dialogs/extendedprogress/loading.png</texture>
+				<texture>$VAR[ExtendedProgressLoading]</texture>
 				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
 			</control>
 		</control>
@@ -822,14 +822,14 @@
 				<width>100</width>
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
+				<texture colordiffuse="black">$VAR[ExtendedProgressLoadingBack]</texture>
 			</control>
 			<control type="image">
 				<top>160</top>
 				<width>100</width>
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture>dialogs/extendedprogress/loading.png</texture>
+				<texture>$VAR[ExtendedProgressLoading]</texture>
 				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
 			</control>
 		</control>
@@ -947,14 +947,14 @@
 				<width>100</width>
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
+				<texture colordiffuse="black">$VAR[ExtendedProgressLoadingBack]</texture>
 			</control>
 			<control type="image">
 				<top>160</top>
 				<width>100</width>
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture>dialogs/extendedprogress/loading.png</texture>
+				<texture>$VAR[ExtendedProgressLoading]</texture>
 				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
 			</control>
 		</control>
@@ -7089,14 +7089,14 @@
 					<width>100</width>
 					<height>100</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
+					<texture colordiffuse="black">$VAR[ExtendedProgressLoadingBack]</texture>
 				</control>
 				<control type="image">
 					<top>$PARAM[posy]</top>
 					<width>100</width>
 					<height>100</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture>dialogs/extendedprogress/loading.png</texture>
+					<texture>$VAR[ExtendedProgressLoading]</texture>
 					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
 				</control>
 			</control>

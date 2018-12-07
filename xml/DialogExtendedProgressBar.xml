@@ -17,7 +17,7 @@
 				<top>10</top>
 				<width>60</width>
 				<height>60</height>
-				<texture>dialogs/extendedprogress/loading-back.png</texture>
+				<texture>$VAR[ExtendedProgressLoadingBack]</texture>
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(volumebar)</visible>
@@ -28,15 +28,17 @@
 					<width>60</width>
 					<height>60</height>
 					<texture colordiffuse="$VAR[SkinColorVar]">$INFO[Control.GetLabel(32),dialogs/volume/progress/p,.png]</texture>
-					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+					<animation effect="fade" end="50" time="0" condition="!$EXP[ChristmasTheme]">Conditional</animation>
+					<animation effect="fade" end="100" time="0" condition="$EXP[ChristmasTheme]">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>20</left>
 					<top>10</top>
 					<width>60</width>
 					<height>60</height>
-					<texture>dialogs/extendedprogress/loading.png</texture>
+					<texture>$VAR[ExtendedProgressLoading]</texture>
 					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+					<animation effect="fade" end="80" time="0" condition="$EXP[ChristmasTheme]">Conditional</animation>
 				</control>
 			</control>
 			<control type="grouplist">

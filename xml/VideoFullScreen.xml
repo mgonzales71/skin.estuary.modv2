@@ -23,6 +23,7 @@
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<visible>!Skin.HasSetting(OSDLargeSeekingLabel)</visible>
+				<include>Fade70</include>
 			</control>
 			<control type="label" id="11">
 				<left>45</left>
@@ -58,6 +59,7 @@
 					<aligny>center</aligny>
 					<align>center</align>
 					<label>-</label>
+					<include>Fade70</include>
 					<visible>Skin.HasSetting(OSDLargeSeekingLabel)</visible>
 				</control>
 			</control>
@@ -128,6 +130,7 @@
 				<font>font_musicvis_bigger</font>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
+				<include>Fade70</include>
 				<aligny>center</aligny>
 				<align>center</align>
 			</control>

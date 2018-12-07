@@ -4552,6 +4552,14 @@
 		<value condition="player.rewinding32x">[B]$LOCALIZE[40589][/B] x32</value>
 		<value condition="player.paused">[B]$LOCALIZE[40587][/B]</value>
 	 </variable>
+	<variable name="ExtendedProgressLoading">
+		<value condition="$EXP[ChristmasTheme]">special://skin/extras/themes/christmas/extendedprogress/loading.png</value>
+		<value>special://skin/extras/custom/extendedprogress/loading.png</value>
+	</variable>
+	<variable name="ExtendedProgressLoadingBack">
+		<value condition="$EXP[ChristmasTheme]">special://skin/extras/themes/christmas/extendedprogress/loading-back.png</value>
+		<value>special://skin/extras/custom/extendedprogress/loading-back.png</value>
+	</variable>
      <include name="HideOsdConditions">
         <visible>
             !Window.IsActive(PVROSDGuide) + !Window.IsActive(PVROSDTeletext) + !Window.IsActive(PVROSDChannels) + !Window.IsActive(videobookmarks) + 

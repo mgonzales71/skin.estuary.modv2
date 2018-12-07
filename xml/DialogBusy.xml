@@ -13,12 +13,33 @@
 				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="240" condition="Window.IsVisible(fullscreenvideo) | Window.IsVisible(FullscreenGame)">Conditional</animation>
 			</control>
+        <control type="group">
+				<depth>DepthMax</depth>
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<visible>Skin.HasSetting(EnableCustomBusySpinner)</visible>
+            <control type="multiimage">
+                <animation effect="fade" start="0" end="100" time="0">WindowOpen</animation>
+                <animation effect="fade" start="100" end="0" time="500" delay="500">WindowClose</animation>
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+                <width>150</width>
+                <height>150</height>
+				<aspectratio>keep</aspectratio>
+                <imagepath>$INFO[Skin.String(SkinHelper.SpinnerTexture.Path)]</imagepath>
+                <timeperimage>100</timeperimage>
+                <colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+				<include>Fade60</include>
+                <fadetime>0</fadetime>
+            </control>
+        </control>			
 			<control type="group">
 				<depth>DepthMax</depth>
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
 				<width>80</width>
 				<height>80</height>
+				<visible>!Skin.HasSetting(EnableCustomBusySpinner)</visible>
 				<control type="image">
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
