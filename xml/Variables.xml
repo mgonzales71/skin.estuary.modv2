@@ -3541,6 +3541,14 @@
 		<value condition="!String.IsEmpty(Skin.String(GradientColor))">$INFO[Skin.String(GradientColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
+	<variable name="Label_SkinSetting_BusySpinnerColor">
+		<value condition="$EXP[ChristmasTheme]">$LOCALIZE[40269]</value>
+		<value condition="$EXP[HalloweenTheme]">$LOCALIZE[40270]</value>
+		<value condition="$EXP[EasterTheme]">$LOCALIZE[40271]</value>
+		<value condition="$EXP[ValentineTheme]">$LOCALIZE[40272]</value>
+		<value condition="!String.IsEmpty(Skin.String(BusySpinnerColor))">$INFO[Skin.String(BusySpinnerColor)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
 	<variable name="Label_SkinSetting_BackgroundColor">
 		<value condition="$EXP[ChristmasTheme]">$LOCALIZE[40269]</value>
 		<value condition="$EXP[HalloweenTheme]">$LOCALIZE[40270]</value>
@@ -3610,6 +3618,14 @@
 		<value condition="System.Date(02-13,02-15) + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
 		<value condition="!String.IsEmpty(Skin.String(SkinColor))">$INFO[Skin.String(SkinColor)]</value>
 		<value>button_focus</value>
+	</variable>
+	<variable name="BusySpinnerColorVar">
+		<value condition="System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes)">ffe60014</value>
+		<value condition="System.Date(10-30,11-01) + !Skin.HasSetting(DisableThemes)">fff38844</value>
+		<value condition="System.Date(03-31,04-02) + !Skin.HasSetting(DisableThemes)">ffe9d66b</value>
+		<value condition="System.Date(02-13,02-15) + !Skin.HasSetting(DisableThemes)">ffe8334a</value>
+		<value condition="!String.IsEmpty(Skin.String(BusySpinnerColor))">$INFO[Skin.String(BusySpinnerColor)]</value>
+		<value>$VAR[SkinColorVar]</value>
 	</variable>
 	<variable name="GradientColorVar">
 		<value condition="System.Date(12-01,01-03) + !Skin.HasSetting(DisableThemes)">ffFF1932</value>

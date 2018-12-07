@@ -676,8 +676,9 @@
 					<label>$LOCALIZE[40592]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(EnableCustomBusySpinner)</onclick>
-					<onclick condition="!Skin.String(SkinHelper.SpinnerTexture.Path)">Skin.SetString(SkinHelper.SpinnerTexture.Path, special://skin/extras/busy_spinner/)</onclick>
-					<onclick condition="!Skin.String(SkinHelper.SpinnerTexture.label)">Skin.SetString(SkinHelper.SpinnerTexture.Label,Default Custom)</onclick>
+					<onclick condition="Skin.String(SkinHelper.SpinnerTexture.Path)">Skin.SetString(SkinHelper.SpinnerTexture.Path, special://skin/extras/busy_spinner/)</onclick>
+					<onclick condition="Skin.String(SkinHelper.SpinnerTexture.label)">Skin.SetString(SkinHelper.SpinnerTexture.Label,Default Custom)</onclick>
+					<onclick condition="Skin.String(BusySpinnerColor)">Skin.Reset(BusySpinnerColor)</onclick>
 					<selected>Skin.HasSetting(EnableCustomBusySpinner)</selected>
 				</control>
 				<control type="button" id="599">
@@ -687,6 +688,15 @@
 					<onclick>RunScript(script.skin.helper.service,action=BUSYTEXTURE)</onclick>
 					<visible>Skin.HasSetting(EnableCustomBusySpinner)</visible>
 				</control>
+				<control type="button" id="597">
+					<label>  ∟$LOCALIZE[40594]</label>
+					<label2>$VAR[Label_SkinSetting_BusySpinnerColor]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="!Skin.String(BusySpinnerColor)">RunScript(script.skin.helper.colorpicker,skinstring=BusySpinnerColor)</onclick>
+					<onclick condition="Skin.String(BusySpinnerColor)">Skin.Reset(BusySpinnerColor)</onclick>
+					<visible>Skin.HasSetting(EnableCustomBusySpinner)</visible>
+					<enable>!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</enable>
+				</control>				
 				<control type="radiobutton" id="505">
 					<label>$LOCALIZE[40032]</label>
 					<include>DefaultSettingButton</include>

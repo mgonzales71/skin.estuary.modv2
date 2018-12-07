@@ -2338,4 +2338,7 @@ msgctxt "#40593"
 msgid "Custom Busy Spinner"
 msgstr ""
 
-
+#: /xml/SkinSettings.xml
+msgctxt "#40594"
+msgid "Custom Busy Spinner Color"
+msgstr ""
