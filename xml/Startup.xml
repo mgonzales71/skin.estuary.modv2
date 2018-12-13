@@ -31,10 +31,64 @@
 				<texture>special://skin/extras/backgrounds/splash.png</texture>
 			</control>
 		</control>
+		<control type="group">
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<bottom>160</bottom>
+				<width>100</width>
+				<height>100</height>
+				<aspectratio>keep</aspectratio>
+				<visible>!$EXP[ChristmasTheme] | [$EXP[ChristmasTheme] + Skin.HasSetting(DisableThemes)]</visible>
+				<texture colordiffuse="$VAR[SkinColorVar]">spinner.png</texture>
+				<animation effect="rotate" end="-45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
+				<animation type="WindowOpen">
+					<effect type="Fade" start="0" end="100" time="350" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="Fade" start="100" end="0" time="250" />
+				</animation>
+				<animation type="Visible">
+					<effect type="Fade" start="0" end="100" time="250" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="Fade" start="100" end="0" time="150" />
+				</animation>
+			</control>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<bottom>160</bottom>
+				<width>100</width>
+				<height>100</height>
+				<aspectratio>keep</aspectratio>
+				<visible>$EXP[ChristmasTheme] + !Skin.HasSetting(DisableThemes)</visible>
+				<texture>special://skin/extras/themes/christmas/startup_spinner.apng</texture>
+				<animation type="WindowOpen">
+					<effect type="Fade" start="0" end="100" time="350" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="Fade" start="100" end="0" time="250" />
+				</animation>
+				<animation type="Visible">
+					<effect type="Fade" start="0" end="100" time="250" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="Fade" start="100" end="0" time="150" />
+				</animation>
+			</control>
+			<control type="label">
+				<left>50</left>
+				<right>50</right>
+				<align>center</align>
+				<height>80</height>
+				<bottom>60</bottom>
+				<font>font28_title</font>
+				<label>$LOCALIZE[40284]</label>
+			</control>
+		</control>
 		<control type="button" id="8000">
 			<onfocus condition="Skin.HasSetting(EnableSpashScreen)">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<onfocus condition="Skin.String(SplashScreen) + !Skin.HasSetting(EnableSpashScreen)">RunScript(script.skin.helper.service,action=splashscreen,file=$INFO[Skin.String(SplashScreen)],duration=5)</onfocus>
-			<onfocus condition="!Skin.String(SplashScreen) + !Skin.HasSetting(EnableSpashScreen)">AlarmClock(GoHome,ReplaceWindow($INFO[System.StartupWindow]),00:01,silent,false)</onfocus>
+			<onfocus condition="!Skin.String(SplashScreen) + !Skin.HasSetting(EnableSpashScreen)">AlarmClock(GoHome,ReplaceWindow($INFO[System.StartupWindow]),00:05,silent,false)</onfocus>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
 	</controls>

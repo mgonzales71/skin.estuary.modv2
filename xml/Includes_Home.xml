@@ -514,7 +514,7 @@
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
 				<texture>$VAR[ExtendedProgressLoading]</texture>
-				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!$EXP[BusyOverride]">Conditional</animation>
 			</control>
 		</control>
 		<control type="panel" id="22900">
@@ -683,7 +683,7 @@
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
 				<texture>$VAR[ExtendedProgressLoading]</texture>
-				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!$EXP[BusyOverride]">Conditional</animation>
 			</control>
 		</control>
 		<control type="panel" id="23900">
@@ -830,7 +830,7 @@
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
 				<texture>$VAR[ExtendedProgressLoading]</texture>
-				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!$EXP[BusyOverride]">Conditional</animation>
 			</control>
 		</control>
 		<control type="panel" id="229001">
@@ -955,7 +955,7 @@
 				<height>100</height>
 				<aspectratio aligny="center">keep</aspectratio>
 				<texture>$VAR[ExtendedProgressLoading]</texture>
-				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!$EXP[BusyOverride]">Conditional</animation>
 			</control>
 		</control>
 		<control type="panel" id="239001">
@@ -7097,7 +7097,7 @@
 					<height>100</height>
 					<aspectratio aligny="center">keep</aspectratio>
 					<texture>$VAR[ExtendedProgressLoading]</texture>
-					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!$EXP[BusyOverride]">Conditional</animation>
 				</control>
 			</control>
 		</definition>

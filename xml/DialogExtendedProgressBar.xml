@@ -37,7 +37,7 @@
 					<width>60</width>
 					<height>60</height>
 					<texture>$VAR[ExtendedProgressLoading]</texture>
-					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!$EXP[BusyOverride]">Conditional</animation>
 					<animation effect="fade" end="80" time="0" condition="$EXP[ChristmasTheme]">Conditional</animation>
 				</control>
 			</control>

@@ -588,6 +588,17 @@
 					<selected>System.HasAddon(resource.images.moviegenreicons.estuarymod)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
+				<control type="radiobutton" id="399">
+					<label>Busy Spinners - Extended $INFO[System.AddonVersion(resource.images.busyspinners.extended),(,)]</label>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(resource.images.busyspinners.extended)">RunScript(script.skin.helper.service,action=textviewer,header='Busy Spinners - Extended',message='This [B]optional[/B] addon is located in skin's extras folder at:[CR][CR][B]extras\optional-addons\resource.images.busyspinners.extended.zip[/B][CR][CR]Install this addon manually via [B]Settings - Addons - Install From Zip[/B] menu')</onclick>
+					<onclick condition="System.HasAddon(resource.images.busyspinners.extended)">Addon.OpenSettings(resource.images.busyspinners.extended)</onclick>
+					<selected>System.HasAddon(resource.images.busyspinners.extended)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
 			</control>
 			<control type="grouplist" id="400">
 				<top>168</top>
@@ -676,7 +687,7 @@
 					<label>$LOCALIZE[40592]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(EnableCustomBusySpinner)</onclick>
-					<onclick condition="Skin.String(SkinHelper.SpinnerTexture.Path)">Skin.SetString(SkinHelper.SpinnerTexture.Path, special://skin/extras/busy_spinner/)</onclick>
+					<onclick condition="Skin.String(SkinHelper.SpinnerTexture.Path)">Skin.SetString(SkinHelper.SpinnerTexture.Path, special://skin/extras/custom/busy_spinner/)</onclick>
 					<onclick condition="Skin.String(SkinHelper.SpinnerTexture.label)">Skin.SetString(SkinHelper.SpinnerTexture.Label,Default Custom)</onclick>
 					<onclick condition="Skin.String(BusySpinnerColor)">Skin.Reset(BusySpinnerColor)</onclick>
 					<selected>Skin.HasSetting(EnableCustomBusySpinner)</selected>

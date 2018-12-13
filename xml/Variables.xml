@@ -4569,10 +4569,12 @@
 		<value condition="player.paused">[B]$LOCALIZE[40587][/B]</value>
 	 </variable>
 	<variable name="ExtendedProgressLoading">
+		<value condition="$EXP[BusyOverride]">$INFO[Skin.String(SkinHelper.SpinnerTexture.Path)]</value>
 		<value condition="$EXP[ChristmasTheme]">special://skin/extras/themes/christmas/extendedprogress/loading.png</value>
 		<value>special://skin/extras/custom/extendedprogress/loading.png</value>
 	</variable>
 	<variable name="ExtendedProgressLoadingBack">
+		<value condition="$EXP[BusyOverride]"></value>
 		<value condition="$EXP[ChristmasTheme]">special://skin/extras/themes/christmas/extendedprogress/loading-back.png</value>
 		<value>special://skin/extras/custom/extendedprogress/loading-back.png</value>
 	</variable>

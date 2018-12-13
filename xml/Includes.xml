@@ -48,6 +48,7 @@
 	<expression name="HalloweenTheme">System.Date(10-30,11-01) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
 	<expression name="EasterTheme">System.Date(04-20,04-22) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
 	<expression name="ValentineTheme">System.Date(02-13,02-15) + !Skin.HasSetting(DisableThemes) + [!VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo) + !Window.IsVisible(visualisation) + !Window.IsVisible(1104)]</expression>
+	<expression name="BusyOverride">Skin.HasSetting(EnableCustomBusySpinner) + !String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path))</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -2289,13 +2290,25 @@
 			<texture colordiffuse="$VAR[BackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
 			<visible>![[Player.HasVideo | Slideshow.IsActive] + Skin.HasSetting(opacity_100)]</visible>
 		</control>
-		<control type="image">
+<!-- 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PatternColorVar]">special://skin/extras/patterns/pattern13.png</texture>
 			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
 			<visible>$EXP[ChristmasTheme]</visible>
+		</control> -->
+		<control type="multiimage">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<imagepath colordiffuse="$VAR[PatternColorVar]">special://skin/extras/themes/christmas/bg_patterns/</imagepath>
+			<visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
+			<visible>$EXP[ChristmasTheme]</visible>
+			<timeperimage>300000</timeperimage>
+			<fadetime>3000</fadetime>
+			<loop>yes</loop>
+			<randomize>true</randomize>
 		</control>
 		<control type="image">
 			<depth>DepthBackground</depth>
@@ -4138,8 +4151,30 @@
 				<width>100</width>
 				<height>100</height>
 				<aspectratio>keep</aspectratio>
+				<visible>!$EXP[ChristmasTheme] | [$EXP[ChristmasTheme] + Skin.HasSetting(DisableThemes)]</visible>
 				<texture colordiffuse="$VAR[SkinColorVar]">spinner.png</texture>
 				<animation effect="rotate" end="-45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
+				<animation type="WindowOpen">
+					<effect type="Fade" start="0" end="100" time="350" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="Fade" start="100" end="0" time="250" />
+				</animation>
+				<animation type="Visible">
+					<effect type="Fade" start="0" end="100" time="250" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="Fade" start="100" end="0" time="150" />
+				</animation>
+			</control>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<bottom>160</bottom>
+				<width>100</width>
+				<height>100</height>
+				<aspectratio>keep</aspectratio>
+				<visible>$EXP[ChristmasTheme] + !Skin.HasSetting(DisableThemes)</visible>
+				<texture>special://skin/extras/themes/christmas/startup_spinner.apng</texture>
 				<animation type="WindowOpen">
 					<effect type="Fade" start="0" end="100" time="350" />
 				</animation>
