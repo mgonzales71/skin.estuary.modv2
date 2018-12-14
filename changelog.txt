@@ -1,3 +1,6 @@
+[B]3.0.5[/B]
+• Minor fixes
+
 [B]3.0.4[/B]
 • KODI 18 : Bump target GUI API to 5.14.0
 • KODI 18 : Add GUI for Radio Data System (RDS)
