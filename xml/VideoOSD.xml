@@ -168,6 +168,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
 					</include>
 					<onclick>Info</onclick>
+					<visible>!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes)</visible>
 				</control>
 				<control type="radiobutton" id="70040">
 					<include content="OSDButton">
