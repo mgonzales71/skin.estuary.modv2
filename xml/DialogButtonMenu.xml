@@ -105,6 +105,12 @@
 						<onclick>Quit()</onclick>
 						<visible>System.ShowExitButton</visible>
 					</item>
+    				<item>
+        				<label>$LOCALIZE[5]</label>
+        				<icon>special://skin/extras/icons/Power menu/settings.png</icon>
+						<onclick>Dialog.Close(all, true)</onclick>
+        				<onclick>ActivateWindow(Settings)</onclick>       
+    				</item>
 					<item>
 						<label>$LOCALIZE[13016]</label>
 						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
@@ -196,6 +202,11 @@
         				<label>$LOCALIZE[20183]</label>
         				<icon>special://skin/extras/icons/Power menu/reload.png</icon>
         				<onclick>ReloadSkin()</onclick>       
+    				</item>
+    				<item>
+        				<label>$LOCALIZE[40595]</label>
+        				<icon>special://skin/extras/icons/Power menu/toggledebug.png</icon>
+        				<onclick>ToggleDebug()</onclick>       
     				</item>
 				</content>
 			</control>
@@ -302,6 +313,12 @@
 						<onclick>Quit()</onclick>
 						<visible>System.ShowExitButton</visible>
 					</item>
+    				<item>
+        				<label>$LOCALIZE[5]</label>
+        				<icon>special://skin/extras/icons/Power menu/settings.png</icon>
+						<onclick>Dialog.Close(all, true)</onclick>
+        				<onclick>ActivateWindow(Settings)</onclick>       
+    				</item>
 					<item>
 						<label>$LOCALIZE[13016]</label>
 						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
@@ -394,6 +411,11 @@
         				<icon>special://skin/extras/icons/Power menu/reload.png</icon>
         				<onclick>ReloadSkin()</onclick>       
     				</item>
+    				<item>
+        				<label>$LOCALIZE[40595]</label>
+        				<icon>special://skin/extras/icons/Power menu/toggledebug.png</icon>
+        				<onclick>ToggleDebug()</onclick>       
+    				</item>
 				</content>
 			</control>
 		</control>
@@ -418,6 +440,12 @@
 						<onclick>Quit()</onclick>
 						<visible>System.ShowExitButton</visible>
 					</item>
+    				<item>
+        				<label>$LOCALIZE[5]</label>
+        				<icon>special://skin/extras/icons/Power menu/settings.png</icon>
+						<onclick>Dialog.Close(all, true)</onclick>
+        				<onclick>ActivateWindow(Settings)</onclick>       
+    				</item>
 					<item>
 						<label>$LOCALIZE[13016]</label>
 						<icon>special://skin/extras/icons/Power menu/powerdown.png</icon> 
@@ -509,6 +537,11 @@
         				<label>$LOCALIZE[20183]</label>
         				<icon>special://skin/extras/icons/Power menu/reload.png</icon>
         				<onclick>ReloadSkin()</onclick>       
+    				</item>
+    				<item>
+        				<label>$LOCALIZE[40959]</label>
+        				<icon>special://skin/extras/icons/Power menu/toggledebug.png</icon>
+        				<onclick>ToggleDebug()</onclick>       
     				</item>
 				</content>
 			</control>
@@ -536,14 +569,24 @@
 				<texture colordiffuse="$VAR[GradientColorVar]">icons/logo-gradient.png</texture>
 				<visible>Skin.HasSetting(EnableGradientColor)</visible>
 			</control>
-			<control type="image">
-				<left>40</left>
-				<top>10</top>
-				<aspectratio>keep</aspectratio>
-				<width>192</width>
-				<height>36</height>
-				<texture>icons/logo-text.png</texture>
-			</control>
+				<control type="image">
+					<left>40</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>icons/logo-text.png</texture>
+					<visible>!Skin.HasSetting(MinimizeMainMenu) + !$EXP[ChristmasTheme]</visible>
+				</control>
+				<control type="image">
+					<left>40</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>special://skin/extras/themes/christmas/christmas-logo-text.apng</texture>
+					<visible>!Skin.HasSetting(MinimizeMainMenu) + $EXP[ChristmasTheme]</visible>
+				</control>
 		</control>
 	</controls>
 </window>

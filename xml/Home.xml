@@ -2448,7 +2448,16 @@
 					<width>192</width>
 					<height>36</height>
 					<texture>icons/logo-text.png</texture>
-					<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
+					<visible>!Skin.HasSetting(MinimizeMainMenu) + !$EXP[ChristmasTheme]</visible>
+				</control>
+				<control type="image">
+					<left>40</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>special://skin/extras/themes/christmas/christmas-logo-text.apng</texture>
+					<visible>!Skin.HasSetting(MinimizeMainMenu) + $EXP[ChristmasTheme]</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -2512,7 +2521,16 @@
 					<width>192</width>
 					<height>36</height>
 					<texture>icons/logo-text.png</texture>
-					<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
+					<visible>!Skin.HasSetting(MinimizeMainMenu) + !$EXP[ChristmasTheme]</visible>
+				</control>
+				<control type="image">
+					<left>40</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>special://skin/extras/themes/christmas/christmas-logo-text.apng</texture>
+					<visible>!Skin.HasSetting(MinimizeMainMenu) + $EXP[ChristmasTheme]</visible>
 				</control>
 			</control>
 			<control type="label">

@@ -2342,3 +2342,8 @@ msgstr ""
 msgctxt "#40594"
 msgid "Custom Busy Spinner Color"
 msgstr ""
+
+#: /xml/DialogButtonMenu.xml
+msgctxt "#40595"
+msgid "Toggle Debug"
+msgstr ""
