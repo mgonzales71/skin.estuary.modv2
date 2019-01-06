@@ -104,7 +104,7 @@
 				<param name="widget_header" value="$INFO[Window(Home).Property(NextAired.212.Weekday)] $INFO[Window(home).Property(NextAired.212.Date),(,)]"/>
 				<param name="Container.Label" value="$INFO[Container(212).ListItem.Label]"/>
 				<param name="visible" value="String.IsEqual(Container(9000).ListItem.Property(id),today11)"/>
-				<param name="list_id" value="2121"/>
+				<param name="list_id" value="212"/>
 			</include>
 			<include content="NextAiredPosterWidget" description="Today +12">
 				<param name="widget_header" value="$INFO[Window(Home).Property(NextAired.213.Weekday)] $INFO[Window(home).Property(NextAired.213.Date),(,)]"/>
