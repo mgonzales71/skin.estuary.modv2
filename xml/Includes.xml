@@ -1342,6 +1342,28 @@
 					</control>
 				</control>
 				<control type="group">
+					<width>194</width>
+					<height>50</height>
+					<visible>!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
+					<control type="image">
+						<top>5</top>
+						<width>194</width>
+						<height>50</height>
+						<texture>flags/cadre2.png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<top>4</top>
+						<left>3</left>
+						<width>188</width>
+						<height>50</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[MusicPlayer.BitsPerSample] bits</label>
+						<font>font_flag</font>
+					</control>
+				</control>
+				<control type="group">
 					<width>204</width>
 					<height>40</height>
 					<visible>!String.IsEmpty(MusicPlayer.UserRating) + Window.IsVisible(Custom_1141_MusicPlayerInfo.xml)</visible>
@@ -3815,6 +3837,26 @@
 						<align>center</align>
 						<top>2</top>
 						<label>$INFO[MusicPlayer.BitRate] kbps</label>
+						<font>Font-Flag-Small</font>
+					</control>
+				</control>
+				<control type="group">
+					<width>155</width>
+					<height>40</height>
+					<visible>!String.IsEmpty(MusicPlayer.BitsPerSample) + Window.IsVisible(MusicVisualisation.xml)</visible>
+					<control type="image">
+						<top>5</top>
+						<width>155</width>
+						<height>40</height>
+						<texture>flags/cadre.png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>155</width>
+						<height>40</height>
+						<align>center</align>
+						<top>2</top>
+						<label>$INFO[MusicPlayer.BitsPerSample] bits</label>
 						<font>Font-Flag-Small</font>
 					</control>
 				</control>

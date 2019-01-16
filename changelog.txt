@@ -1,4 +1,5 @@
 [B]3.0.5[/B]
+• Add number of bits per sample on music OSD
 • Display seekbar on showtime action
 • Fix Holidays themes
 • Minor fixes
