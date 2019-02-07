@@ -937,7 +937,7 @@
 				<include content="MediaFlag">
 					<param name="texture" value="flags/webdl.png" />
 					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEB-DL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEBDL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEB) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,web-dl) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,webdl) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,web)" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEB-DL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEBDL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,web-dl) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,webdl)" />
 					<param name="visible2" value="!Control.HasFocus(11100) + !Skin.HasSetting(show_mediasourceflag)" />
 					<param name="top" value="5" />
 				</include>
@@ -1110,7 +1110,7 @@
 				<include content="MediaFlag">
 					<param name="texture" value="flags/webdl.png" />
 					<param name="width" value="71" />
-					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEB-DL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEBDL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEB) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,web-dl) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,webdl) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,web)" />
+					<param name="visible" value="String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEB-DL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,WEBDL) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,web-dl) | String.Contains($PARAM[infolabel_prefix]ListItem.Filenameandpath,webdl)" />
 					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlag">
@@ -3726,7 +3726,7 @@
 				<include content="MediaFlagOSD">
 					<param name="texture" value="flags/webdl.png" />
 					<param name="width" value="58" />
-					<param name="visible" value="[String.Contains(Player.Filenameandpath,WEB-DL) | String.Contains(Player.Filenameandpath,WEBDL) | String.Contains(Player.Filenameandpath,WEB) | String.Contains(Player.Filenameandpath,web-dl) | String.Contains(Player.Filenameandpath,webdl) | String.Contains(Player.Filenameandpath,web)] + !Window.IsVisible(MusicVisualisation.xml)" />
+					<param name="visible" value="[String.Contains(Player.Filenameandpath,WEB-DL) | String.Contains(Player.Filenameandpath,WEBDL) | String.Contains(Player.Filenameandpath,web-dl) | String.Contains(Player.Filenameandpath,webdl)] + !Window.IsVisible(MusicVisualisation.xml)" />
 				</include>
 				<include content="MediaFlagOSD">
 					<param name="texture" value="flags/dvd.png" />
